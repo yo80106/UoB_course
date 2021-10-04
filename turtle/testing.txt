@@ -1,0 +1,36 @@
+1. parser_test.c
+7 testing functions were desinged in the file:
+  bool test_Var(program *p, char *str);
+  bool test_VarNum(program *p, char *str);
+  bool test_Instruction(program *p, char *str1, char *str2);
+  bool test_Doloop(program *p);
+  bool test_Oper(program *p, char *str);
+  bool test_Polish(program *p);
+  bool test_Set(program *p);
+
+These function work very similar as the ones in main script
+(parser.c), but with small modifications that return "true"
+if they could correctly recognise the grammar.
+
+2. interpreter_test.c
+10 testing functions were desinged in the file:
+  void reset_prog(program *p);
+  bool test_Var(program *p, char *str);
+  float test_VarNum(char *varnum, graph *grp);
+  bool test_FD(program *p, SDL_Simplewin *sdl, graph *grp, 
+              char *str1, char *str2);
+  bool test_RT(program *p, graph *grp, char *str1, char *str2);
+  bool test_LT(program *p, graph *grp, char *str1, char *str2);
+  int test_Doloop(program *p, SDL_Simplewin *sdl, graph *grp);
+  bool test_Oper(program *p, char *str);
+  bool test_Polish(program *p, graph *grp, int ascii, stack *st);
+  bool test_Set(program *p, graph *grp);
+
+These function work very similar as the ones in main script
+(interpreter.c). The testing can verify the grammar and 
+expected outcomes of the functions. Graphing interface was 
+turned off in the testing, so there are no graphing outputs.
+
+3. extension_test.c
+No extra testing were desinged in this testing script. The 
+function in main script were directly tested.

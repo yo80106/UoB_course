@@ -1,0 +1,35 @@
+My extension is to design LIST structure for users.
+The formal grammar of the Turtle Graphics:
+
+<MAIN> ::= "{" <INSTRCTLST>
+<INSTRCTLST> ::= <INSTRUCTION><INSTRCTLST> |"}"
+<INSTRUCTION> ::= <FD> | <LT> | <RT> | <DO> | <SET>
+<FD> ::= "FD" <VARNUM>
+<LT> ::= "LT" <VARNUM>
+<RT> ::= "RT" <VARNUM>
+<DO> ::= "DO" <VAR> "FROM" <VARNUM> "TO"
+<VARNUM> "{" <INSTRCTLST>
+<VAR> ::= [A−Z]
+<VARNUM> ::= number | <VAR>
+<SET> ::= "SET" <VAR> ":=" <POLISH> | "SET" <VAR> := <LIST> |
+"SET" <VAR> := <LIST_FUNC> 
+<LIST> ::= "[" <VARNUM> "]"
+<LIST_FUNC> ::= "SUM" <VAR> | "SUM" <LIST>
+                "MEAN" <VAR> | "MEAN" <LIST>
+                "LEN" <VAR> | "LEN" <LIST>
+<POLISH> ::= <OP> <POLISH> | <VARNUM> <POLISH> | ";"
+<OP> ::= "+" | "−" | "*" | "/"
+
+I developed two new list-related statements: <LIST> and 
+<LIST_FUNC>. Both <LIST> and <LIST_FUNC> shall be defined
+in <SET> statements, meaning they are not <INSTRUCTION> 
+which cannot use independently. For example,
+SET A := [1 2 3] (valid)
+SET B := SUM A (valid)
+MEAN A (error)
+User can also put a varible/variables inside of the list.
+For example, SET A := [1 2 3 B]. However, the nested list 
+structure is not allowed. For now, there are three list 
+functions: "SUM", "MEAN", and "LEN", which will return
+the total value, average value, and number of items of a 
+given list respectively.
