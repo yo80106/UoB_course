@@ -22,6 +22,7 @@ This is the final project (assignment) for the C programming course at UoB of Co
     LT 45
 }
 ```
+![](https://github.com/yo80106/UoB_course/raw/main/turtle/images/example.png)
 
 ## Adding Loops
 ```
@@ -43,6 +44,7 @@ This is the final project (assignment) for the C programming course at UoB of Co
     }
 }
 ```
+![](https://github.com/yo80106/UoB_course/raw/main/turtle/images/variable.png)
 
 ## The Formal Grammar
 ```
@@ -74,3 +76,5 @@ After the parser and interpreter are compiled, users can start to write their ow
 ./interpreter spiral1_c.ttl
 ```
 The graphic will look like:
+
+![](https://github.com/yo80106/UoB_course/raw/main/turtle/images/spiral1.gif)
