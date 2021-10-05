@@ -1,6 +1,8 @@
 # STAG
 This is the final project (assignment) for the Java programming course at UoB of Computer Science MSc. The focus of this assignment is to build a general-purpose socket-server game-engine for text adventure games. A typical game of this genre is illustrated in the screenshot below.
 
+![](https://github.com/yo80106/UoB_course/blob/main/STAG/images/adventure.jpg)
+
 The following sections illustrate different requirements for building a functional system.
 
 ## Game Server
@@ -53,6 +55,8 @@ There is another special location called "unplaced" that can be found in the ent
 
 The image below visually shows the structure of the basic entities file. As you can see, each location is represented by a box containing a number of different entities (each type of entity being represented by a different shape). The paths between locations are also presented as directed arrows.
 
+![](https://github.com/yo80106/UoB_course/blob/main/STAG/images/basic-entities.png)
+
 ## Game Actions
 Dynamic behaviours within the game are represented by "Actions", each of which has following elements:
 
@@ -94,3 +98,5 @@ Next, run the client side by entering:
 java StagClient <username>
 ```
 The outcome will look like:
+
+![](https://github.com/yo80106/UoB_course/blob/main/STAG/images/output.gif)
