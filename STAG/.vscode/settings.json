@@ -1,0 +1,7 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "dot-parser.jar",
+        "json-parser.jar"
+    ]
+}
